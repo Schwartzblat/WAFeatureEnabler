@@ -1,3 +1,4 @@
+// Just paste it in the web console.
 const moduleRaid = function () {
   moduleRaid.mID  = Math.random().toString(36).substring(7);
   moduleRaid.mObj = {};

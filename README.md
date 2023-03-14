@@ -10,27 +10,22 @@ Script that enables all AB features in WhatsApp Web.
 const moduleRaid = function() {
     moduleRaid.mID = 'moduleRaid';
     moduleRaid.mObj = {};
-
     (window.webpackChunkwhatsapp_web_client).push([
         [moduleRaid.mID], {},
         function(e) {
             Object.keys(e.m).forEach(function(mod) {
                 moduleRaid.mObj[mod] = e(mod);
-            })
+            });
         }
-    ])
-
+    ]);
     get = function get(id) {
         return moduleRaid.mObj[id];
-    }
-
+    };
     findModule = function findModule(query) {
         results = [];
         modules = Object.keys(moduleRaid.mObj);
-
         modules.forEach(function(mKey) {
             mod = moduleRaid.mObj[mKey];
-
             if (!['function', 'string'].includes(typeof query)) {
                 return;
             }
@@ -38,22 +33,19 @@ const moduleRaid = function() {
                 results.push(mod);
                 return;
             }
-            for (key in (mod?.default || mod)) {
+            for (var key in (mod?.default || mod)) {
                 if (key == query) results.push(mod);
             }
-        })
-
+        });
         return results;
-    }
-
+    };
     return {
         modules: moduleRaid.mObj,
         constructors: moduleRaid.cArr,
         findModule: findModule,
         get: get
-    }
-}
-
+    };
+};
 if (typeof module === 'object' && module.exports) {
     module.exports = moduleRaid;
 } else {
@@ -74,5 +66,5 @@ moduleRaidInstance.findModule("getABPropConfigValue")[0].getABPropConfigValue = 
     }
     features[featureName] = retVal;
     return newValue;
-}
+};
 ```

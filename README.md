@@ -54,7 +54,7 @@ if (typeof module === 'object' && module.exports) {
 const moduleRaidInstance = new moduleRaid();
 const features = {};
 const getABPropConfigValue = moduleRaidInstance.findModule("getABPropConfigValue")[0].getABPropConfigValue;
-console.log(`FeatureName${"\t".repeat(4)}Original Value${"\t".repeat(4)}new Value`);
+console.log("FeatureName\t\t\t\tOriginal Value\t\t\t\tnew Value");
 moduleRaidInstance.findModule("getABPropConfigValue")[0].getABPropConfigValue = function(featureName) {
     const retVal = getABPropConfigValue(featureName);
     let newValue = retVal;

@@ -8,51 +8,51 @@ Script that enables all AB features in WhatsApp Web.
 4. Paste the script.
 ```js
 const moduleRaid = (() => {
-	const mObj = {};
-	(window.webpackChunkwhatsapp_web_client).push([
-		['moduleRaid'], {},
-		(e) => {
-			Object.keys(e.m).forEach((mod) => {
-				mObj[mod] = e(mod);
-			});
-		}
-	]);
+  const mObj = {};
+  (window.webpackChunkwhatsapp_web_client).push([
+    ['moduleRaid'], {},
+    (e) => {
+      Object.keys(e.m).forEach((mod) => {
+        mObj[mod] = e(mod);
+      });
+    }
+  ]);
 
-	const get = (id) => {
-		return mObj[id];
-	};
+  const get = (id) => {
+    return mObj[id];
+  };
 
-	const findModule = (query) => {
-		const results = [];
-		const modules = Object.keys(mObj);
+  const findModule = (query) => {
+    const results = [];
+    const modules = Object.keys(mObj);
 
-		modules.forEach((mKey) => {
-			const mod = mObj[mKey];
+    modules.forEach((mKey) => {
+      const mod = mObj[mKey];
 
-			if (typeof query !== 'function' && typeof query !== 'string') {
-				return;
-			}
+      if (typeof query !== 'function' && typeof query !== 'string') {
+        return;
+      }
 
-			if (typeof query === 'function' && query(mod)) {
-				results.push(mod);
-				return;
-			}
+      if (typeof query === 'function' && query(mod)) {
+        results.push(mod);
+        return;
+      }
 
-			for (const key in (mod?.default || mod)) {
-				if (key === query) {
-					results.push(mod);
-				}
-			}
-		});
+      for (const key in (mod?.default || mod)) {
+        if (key === query) {
+          results.push(mod);
+        }
+      }
+    });
 
-		return results;
-	};
+    return results;
+  };
 
-	return {
-		modules: mObj,
-		findModule: findModule,
-		get: get
-	};
+  return {
+    modules: mObj,
+    findModule: findModule,
+    get: get
+  };
 })();
 
 const features = {};
@@ -60,22 +60,19 @@ const getABPropConfigValue = moduleRaid.findModule("getABPropConfigValue")[0].ge
 console.log("FeatureName\t\t\t\tOriginal Value\t\t\t\tNew Value");
 
 moduleRaid.findModule("getABPropConfigValue")[0].getABPropConfigValue = function(featureName) {
-	const retVal = getABPropConfigValue(featureName);
-	let newValue = retVal;
+  const retVal = getABPropConfigValue(featureName);
+  let newValue = retVal;
 
-	const featureList = ["edit", "bonsai", "community", "web", "username", "report", "receive", "wab", "view", "enabled" /* ,"feature name", ...*/];
-	if (featureList.some(element => featureName.includes(element))) {
-		newValue = true;
-	}
+  const featureList = ["edit", "bonsai", "community", "web", "username", "report", "receive", "wab", "view", "enabled" /*, "feature name" ...*/];
+  if (featureList.some(element => featureName.includes(element))) {
+    newValue = true;
+  }
 
-	if (features[featureName] === undefined) {
-		console.log(`[+] ${featureName.padEnd(30)} ${retVal.toString().padEnd(30)} ${newValue.toString()}`);
-	}
+  if (features[featureName] === undefined) {
+    console.log(`[+] ${featureName.padEnd(30)} ${retVal.toString().padEnd(30)} ${newValue.toString()}`);
+  }
 
-	features[featureName] = retVal;
-	return newValue;
-};
-    features[featureName] = retVal;
-    return newValue;
+  features[featureName] = retVal;
+  return newValue;
 };
 ```

@@ -4,7 +4,8 @@ Script that enables all AB features in WhatsApp Web.
 > [!WARNING] 
 > This JavaScript code is for **research purposes** only and is not intended to be used as a basis for any commercial or non-research purposes.  
 > The use of this code is at the user's own risk, and the author(s) assume no responsibility for any misuse or unintended consequences.  
->    
+>
+> 
 > **By using this code, the user acknowledges and agrees to the following:**
 > 
 > The user is solely responsible for any legal consequences arising from the use of this code.

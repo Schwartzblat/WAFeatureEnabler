@@ -1,7 +1,7 @@
 # WAFeatureEnabler
 Script that enables all AB features in WhatsApp Web.
 
-> [!WARNING] 
+> [!CAUTION] 
 > This JavaScript code is for **research purposes** only and is not intended to be used as a basis for any commercial or non-research purposes.  
 > The use of this code is at the user's own risk, and the author(s) assume no responsibility for any misuse or unintended consequences.  
 >

@@ -6,10 +6,14 @@ Script that enables all AB features in WhatsApp Web.
 > The use of this code is at the user's own risk, and the author(s) assume no responsibility for any misuse or unintended consequences.  
 >    
 > **By using this code, the user acknowledges and agrees to the following:**  
-> The user is solely responsible for any legal consequences arising from the use of this code.  
-> The user will not hold the author(s) liable for any damages, losses, or legal actions resulting from the use of this code.  
-> The user agrees to comply with any applicable laws and regulations, including but not limited to copyright, intellectual property, and privacy laws.  
-> Furthermore, the user acknowledges that using this code may violate WhatsApp's Terms of Service and could potentially lead to account bans or other penalties.  
+> The user is solely responsible for any legal consequences arising from the use of this code.
+>   
+> The user will not hold the author(s) liable for any damages, losses, or legal actions resulting from the use of this code.
+> 
+> The user agrees to comply with any applicable laws and regulations, including but not limited to copyright, intellectual property, and privacy laws.
+> 
+> Furthermore, the user acknowledges that using this code may violate WhatsApp's Terms of Service and could potentially lead to account bans or other penalties.
+> 
 > The user is advised to consult their own legal counsel before using this code to ensure compliance with all applicable laws and regulations.  
 
 ## Usage

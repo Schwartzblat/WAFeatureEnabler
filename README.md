@@ -26,7 +26,6 @@ require('WAWebABProps').getABPropConfigValue = function(featureName) {
     let newValue = retVal;
     const featureList = [
         "edit",
-        "bonsai",
         "community",
         "web",
         "username",

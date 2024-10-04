@@ -33,7 +33,16 @@ require('WAWebABProps').getABPropConfigValue = function(featureName) {
         "receive",
         "wab",
         "view",
-        "enabled"
+        "enabled",
+        "system",
+        "include",
+        "additional",
+        "enable",
+        "privacy",
+        "server",
+        "message",
+        "reaction",
+        "meta"
         /*, "feature name" ...*/
     ];
 

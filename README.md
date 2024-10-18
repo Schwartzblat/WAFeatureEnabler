@@ -25,24 +25,11 @@ require('WAWebABProps').getABPropConfigValue = function(featureName) {
     const retVal = getABPropConfigValue(featureName);
     let newValue = retVal;
     const featureList = [
-        "edit",
-        "community",
-        "web",
-        "username",
-        "report",
-        "receive",
-        "wab",
-        "view",
-        "enabled",
-        "system",
-        "include",
-        "additional",
-        "enable",
-        "privacy",
-        "server",
-        "message",
-        "reaction",
-        "meta"
+        "edit", "community", "web", "username",
+        "report", "receive", "wab", "view",
+        "enabled", "system", "include", "additional",
+        "enable", "privacy", "server", "message",
+        "reaction", "meta"
         /*, "feature name" ...*/
     ];
 
